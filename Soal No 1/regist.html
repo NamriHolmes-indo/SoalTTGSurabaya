@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas TTG Surabaya</title>
+    <link rel="stylesheet" href="regist.css" />
+    <script>
+      function validateForm() {
+        const email = document.getElementById("mail").value;
+        const password = document.getElementById("pass").value;
+        const rePassword = document.getElementById("repass").value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordPattern =
+          /^(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/;
+
+        if (!emailPattern.test(email)) {
+          alert("Format email tidak valid.");
+          return false;
+        }
+
+        if (password !== rePassword) {
+          alert("Password dan Re-Password harus sama.");
+          return false;
+        }
+
+        if (!passwordPattern.test(password)) {
+          alert(
+            "Password harus terdiri dari minimal 8 karakter dan mengandung setidaknya 1 karakter unik."
+          );
+          return false;
+        }
+
+        alert("Data berhasil didaftarkan");
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <section class="kanan"></section>
+      <section class="kiri">
+        <div class="form-container">
+          <h1>Registrasi</h1>
+          <form action="" method="post" onsubmit="return validateForm()">
+            <div class="input-container">
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nama Lengkap"
+                required
+              />
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Password"
+                required
+              />
+              <input
+                type="password"
+                name="repass"
+                id="repass"
+                placeholder="Re-Password"
+                required
+              />
+            </div>
+            <div class="button-container regis">
+              <input type="submit" value="Daftar" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

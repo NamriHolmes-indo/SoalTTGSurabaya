@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Lugrasimo&family=Mochiy+Pop+One&family=Montserrat+Alternates:ital,wght@0,600;0,700;1,700&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600&family=Nerko+One&family=Poppins:wght@200;300;400;500;600;700&family=Potta+One&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 820px) {
+  body main {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+body main .kanan {
+  flex: 1;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("logres.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: rotate(180deg);
+  filter: brightness(0.75);
+}
+@media only screen and (max-width: 820px) {
+  body main .kanan {
+    flex: 2;
+    width: 100vw;
+  }
+}
+body main .kiri {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 820px) {
+  body main .kiri {
+    flex: 8;
+    width: 100vw;
+  }
+}
+body main .kiri .form-container {
+  width: 80%;
+}
+@media only screen and (max-width: 820px) {
+  body main .kiri .form-container {
+    width: 90vw;
+  }
+}
+body main .kiri .form-container h1 {
+  color: #000;
+  font-family: Righteous;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 820px) {
+  body main .kiri .form-container h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+}
+body main .kiri .form-container form .input-container {
+  width: 100%;
+}
+body main .kiri .form-container form .input-container input {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 820px) {
+  body main .kiri .form-container form .input-container input {
+    font-size: 0.8rem;
+  }
+}
+body main .kiri .form-container form .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body main .kiri .form-container form .button-container input[type=submit],
+body main .kiri .form-container form .button-container a {
+  display: flex;
+  padding: 10px 30px;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 820px) {
+  body main .kiri .form-container form .button-container input[type=submit],
+  body main .kiri .form-container form .button-container a {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+  }
+}
+body main .kiri .form-container form .button-container input[type=submit] {
+  background-color: #00ff1a;
+  color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+body main .kiri .form-container form .button-container a {
+  text-decoration: none;
+  background-color: #00c2ff;
+  color: #ff0000;
+}
+body main .kiri .form-container form .button-container .login-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  gap: 10px;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 10px;
+  margin: 0px;
+  margin-top: 50px;
+}
+body main .kiri .form-container form .button-container .login-container a {
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #007eda;
+  margin: 0px;
+}
+body main .kiri .form-container form .button-container .regis {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  gap: 10px;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 10px;
+}
+body main .kiri .form-container form .button-container .regis a {
+  color: #ff0000;
+}
+@media only screen and (max-width: 820px) {
+  body main .kiri .form-container form .button-container .regis p,
+  body main .kiri .form-container form .button-container .regis a {
+    font-size: 0.8rem;
+  }
+}
+body main .kiri .form-container form .regis {
+  display: flex;
+}
+body main .kiri .regis-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+  gap: 10px;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 10px;
+}
+body main .kiri .regis-container a {
+  color: #ff0000;
+}
+@media only screen and (max-width: 820px) {
+  body main .kiri .regis-container {
+    gap: 1px;
+  }
+  body main .kiri .regis-container p,
+  body main .kiri .regis-container a {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=regist.css.map */
